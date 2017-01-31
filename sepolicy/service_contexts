@@ -61,3 +61,4 @@ media.cacao                               u:object_r:mediaserver_service:s0
 #com.qualcomm.qti.auth.securesampleauthdaemon   u:object_r:fidotest_service:s0
 #line 1 "out/target/product/leo/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
+com.sony.timekeep              u:object_r:timekeep_service:s0
