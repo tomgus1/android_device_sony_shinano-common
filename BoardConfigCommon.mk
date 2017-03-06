@@ -45,6 +45,7 @@ BOARD_BLUEDROID_VENDOR_CONF := device/sony/shinano-common/bluetooth/vnd_shinano.
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
