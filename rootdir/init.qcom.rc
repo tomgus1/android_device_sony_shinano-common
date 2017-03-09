@@ -118,8 +118,8 @@ on boot
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
 
-	#Create NETMGR daemon socket area
-	mkdir /dev/socket/netmgr 0750 radio radio
+    #Create NETMGR daemon socket area
+    mkdir /dev/socket/netmgr 0750 radio radio
 
     setprop ro.telephony.call_ring.multiple false
 
@@ -167,7 +167,6 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb1/cec/wr_msg
     chown system graphics /sys/class/graphics/fb1/hdcp/tp
     chmod 0664 /sys/devices/virtual/graphics/fb1/hdcp/tp
-
 
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
@@ -293,14 +292,13 @@ on post-fs
     chown system system /sys/class/leds/led:rgb_blue/pause_hi_multi
 
 on post-fs-data
-		# create directory for DRM plug-ins - give drm the read/write access to
-		# the following directory.
-		mkdir /data/drm 0770 drm drm
+    # create directory for DRM plug-ins - give drm the read/write access to
+    # the following directory.
+    mkdir /data/drm 0770 drm drm
 
-		# create directory for MediaDrm plug-ins - give drm the read/write access to
-		# the following directory.
-		mkdir /data/mediadrm 0770 mediadrm mediadrm
-
+    # create directory for MediaDrm plug-ins - give drm the read/write access to
+    # the following directory.
+    mkdir /data/mediadrm 0770 mediadrm mediadrm
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -393,14 +391,12 @@ on post-fs-data
     mkdir /data/pc 0600 radio radio
     mkdir /cache/pc 0770 radio system
 
-	exec u:r:qti_init_shell:s0 -- /system/bin/rm -r /idd/lost+found
-	mkdir /idd/lost+found 0770 root root
-	mkdir /idd/output 0755 idd idd
-	mkdir /idd/socket 0711 idd idd
-	restorecon_recursive /idd
-	start wvkbd_installer
-
-
+    exec u:r:qti_init_shell:s0 -- /system/bin/rm -r /idd/lost+found
+    mkdir /idd/lost+found 0770 root root
+    mkdir /idd/output 0755 idd idd
+    mkdir /idd/socket 0711 idd idd
+    restorecon_recursive /idd
+    start wvkbd_installer
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -599,13 +595,11 @@ service drm /system/bin/drmserver
     user drm
     group drm system inet drmrpc readproc trimarea
 
-
 service media /system/bin/mediaserver
     class main
     user media
     group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm credmgr_client system
     ioprio rt 4
-
 
 service mediadrm /system/bin/mediadrmserver
     class main
@@ -643,7 +637,6 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
    start imscmservice
 
-
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
@@ -659,4 +652,3 @@ service imscmservice /system/bin/imscmservice
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
-
