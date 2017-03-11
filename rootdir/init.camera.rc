@@ -105,6 +105,12 @@ service taimport /system/bin/taimport
     group system
     oneshot
 
+service updatemiscta /system/bin/updatemiscta
+    class main
+    user updatemiscta
+    group trimarea
+    oneshot
+
 service iddd /system/bin/iddd
     class main
     user idd
