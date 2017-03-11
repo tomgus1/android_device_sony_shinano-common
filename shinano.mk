@@ -179,13 +179,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false
 
-# Time
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
-
 # Touchscreen
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.noresample=1
+
+# TimeKeep
+PRODUCT_PACKAGES += \
+     timekeep \
+     TimeKeep
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -194,6 +195,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # BCM Wifi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
+
 
 # HWUI memory limits
 # TODO: Add it into device: 
