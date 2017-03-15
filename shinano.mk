@@ -141,7 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=none \
     persist.audio.dualmic.config=endfire \
-    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicecall=false \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=true
 
