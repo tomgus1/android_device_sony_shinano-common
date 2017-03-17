@@ -53,3 +53,7 @@
 # TimeKeep
 /data/time(/.*)                          u:object_r:timekeep_data_file:s0
 /system/bin/timekeep                          u:object_r:timekeep_exec:s0
+
+# macaddrsetup
+/system/bin/macaddrsetup				u:object_r:addrsetup_exec:s0
+/sys/devices/platform/bcmdhd_wlan/macaddr	u:object_r:sysfs_addrsetup:s0
