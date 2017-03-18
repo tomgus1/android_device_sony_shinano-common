@@ -23,7 +23,6 @@ import /init.camera.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
-    echo 8 8 8 8 > /proc/sys/kernel/printk
 
 on init
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
