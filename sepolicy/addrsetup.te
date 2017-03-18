@@ -15,4 +15,8 @@ allow addrsetup sysfs_addrsetup:file rw_file_perms;
 allow addrsetup urandom_device:file read;
 allow addrsetup tad_socket:sock_file { write };
 
+#============= addrsetup ==============
+allow addrsetup self:capability dac_override;
+#============= hostapd ==============
+allow hostapd sysfs_addrsetup:file { getattr open read };
 
