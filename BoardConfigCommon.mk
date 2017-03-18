@@ -54,7 +54,8 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
 # GPS
-TARGET_PROVIDES_GPS_LOC_API := true
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
+BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_shinano
