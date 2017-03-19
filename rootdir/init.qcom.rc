@@ -604,7 +604,7 @@ service qcom-sensor-sh /system/bin/sh /system/etc/init.qcom-sensor.sh
 service timekeep /system/bin/timekeep restore
     class late_start
     user root
-    group root
+    group root radio qcom_diag
     oneshot
     seclabel u:r:timekeep:s0
 
