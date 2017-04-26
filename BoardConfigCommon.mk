@@ -25,7 +25,7 @@ PRODUCT_PLATFORM:= shinano
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
-#BOARD_KERNEL_CMDLINE  += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE  += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_DTB_EXTRA_FLAGS := --force-v2
@@ -36,15 +36,12 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-BOARD_HAVE_BCM_FM := true
+#BOARD_HAVE_BCM_FM := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/shinano-common/bluetooth
-
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony

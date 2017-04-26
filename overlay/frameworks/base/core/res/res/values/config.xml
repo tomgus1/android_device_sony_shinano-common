@@ -28,6 +28,6 @@
     <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Enable blur support -->
-    <bool name="config_uiBlurEnabled">true</bool>
-
+<!--    <bool name="config_uiBlurEnabled">true</bool>
+-->
 </resources>
